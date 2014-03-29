@@ -1,0 +1,78 @@
+body{
+	margin:0;
+	padding:0;
+	font-size: 100%;
+	font: inherit;
+	background-color: #FFFFFF;
+	font-family: 'ProximaNovaTest';
+	font-weight: normal;
+}
+
+a:hover  {
+	/*color: #a95ccb;
+  border-bottom: 1px solid #a95ccb;*/
+ }
+
+a:visited {
+	color: #a95ccb;
+ }
+
+.link_bold, .link_bold:visited, .link_bold:hover {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.link_bold:hover  {
+  border-bottom: 1px solid #FFFFFF;
+ }
+
+#container {
+	width: 100%;
+}
+
+#container a {
+	width: 100%;
+	height: 3000px;  
+	display: block;
+}
+
+#container a.short {
+	width: 100%;
+	height: 1500px;  
+	display: block;
+}
+
+
+#canon01 { 
+	background: url(../images/canon_02.jpg) no-repeat scroll center 0; 
+	height: 3444px;  
+	margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+}
+
+#canon02 { 
+	background: url(../images/canon_03.jpg) no-repeat scroll center 0; 
+	height: 3277px;  
+	margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+}
+
+#canon03 { 
+	background: url(../images/canon_04.jpg) no-repeat scroll center 0; 
+	height: 1712px;  
+	margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+}
+
+#canon04 { 
+	background: url(../images/canon_05.jpg) no-repeat scroll center 0; 
+	height: 1904px;  
+	margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+}
+
+
