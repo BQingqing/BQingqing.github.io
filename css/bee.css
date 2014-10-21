@@ -283,7 +283,7 @@ img.mfp-img{
 
 #section1{
   height: 700px;
-  background: url('../img/bqq_3.png');
+  background: url('../img/bee_top.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -385,7 +385,7 @@ img.mfp-img{
 
 /*------skills------*/
 #section4{
-  background-image: url('../img/bqq_4.png');
+  background-image: url('../img/bee_bottom.png');
   height: 550px;
   background-size: cover;
   text-align: right;
