@@ -19,7 +19,12 @@ ul#demo-block{
 	}
 }
 
-#index-main{
+#home-first{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
 	h2{
 		color: white;
 		position: absolute;
@@ -27,4 +32,12 @@ ul#demo-block{
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+}
+
+#home-second{
+	position: relative;
+	z-index: 2;  /* sets it above .slide1  */
+	margin-top: 100%; /* this pushes it below .slide1 in the scroll */
+	width: 100%;
+	background: #6FCBD5;
 }
