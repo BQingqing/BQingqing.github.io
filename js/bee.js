@@ -1,19 +1,156 @@
-$(document).ready(function(){
-	$.supersized({
-		// Functionality
-		slide_interval: 5000,		// Length between transitions
-		transition: 1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-		transition_speed:	700,		// Speed of transition
-												   
-		// Components							
-		slide_links:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
-		slides:  	
-			[
-				{image : 'https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/383757_10150508898448847_1295074568_n.jpg?oh=ca3ba61628438a5f8089d94bc6fa9ce7&oe=54EB2A0E&__gda__=1425446021_577ff69ebae9742c0351a95ed24d4fda', title : 'QQ_Bee'},
-				{image : 'https://scontent-b.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/402974_10150508898738847_247126169_n.jpg?oh=85283bb6b4082e3dab321f6726c7a857&oe=54B77BA6', title : 'QQ_Bee'},  
-				{image : 'https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/393442_10150508901553847_173579672_n.jpg?oh=6d68138f129591531b23715667dc437b&oe=54EAAF10&__gda__=1420538151_b415ddd3052b0270001cc725dd3ea498', title : 'QQ_Bee'},
-			]
-		
-	});
-});
+$(document).ready(function() {
+      /* smooth scrolling for scroll to top */
+      $('.scroll-top').click(function(e){
+        e.preventDefault();
+        $('html,body').animate({scrollTop:0}, 'fast');
+      });
+      /* smooth scrolling for nav sections */
+      $('#nav .navbar-nav li>a').click(function(e){
+        e.preventDefault();
+        var link = $(this).attr('href');
+        var posi = $(link).offset().top;
+        $('body,html').animate({scrollTop:posi}, 700);
+      });
+      /* affix the navbar after scroll below header */
+      $('#nav').affix({
+            offset: {
+              top: $('header').height()-$('#nav').height()
+            }
+      }); 
+
+      /* highlight the top nav as scrolling occurs */
+      $('body').scrollspy({ target: '#nav' });
+
+      /* copy loaded thumbnails into carousel */
+      $('.panel .img-responsive').on('load', function() {}).each(function(i) {
+        if(this.complete) {
+        	var item = $('<div class="item"></div>');
+          var itemDiv = $(this).parent('a');
+          var title = $(this).parent('a').attr("title");
+          
+          item.attr("title",title);
+        	$(itemDiv.html()).appendTo(item);
+        	item.appendTo('#modalCarousel .carousel-inner'); 
+          if (i==0){ // set first item active
+           item.addClass('active');
+          }
+        }
+      });
+
+      /* activate the carousel */
+      $('#modalCarousel').carousel({interval:false});
+
+      /* change modal title when slide changes */
+      $('#modalCarousel').on('slid.bs.carousel', function () {
+        $('.modal-title').html($(this).find('.active').attr("title"));
+      })
+
+      /* when clicking a thumbnail */
+      $('.panel-thumbnail>a').click(function(e){
+        
+          e.preventDefault();
+          var idx = $(this).parents('.panel').parent().index();
+        	var id = parseInt(idx);
+        	
+        	$('#myModal').modal('show'); // show the modal
+          $('#modalCarousel').carousel(id); // slide carousel to selected
+        	return false;
+      });
+
+      // isotope
+      // if($('#team')){
+      //   $('#team').isotope({
+      //       itemSelector: '.item',
+      //       masonry: {columnWidth: 50}
+      //   }); 
+      // }
+
+      // magnific pop-up modal
+     // if($('.zoom-gallery')){
+     //    $('.zoom-gallery').magnificPopup({
+     //        delegate: 'a',
+     //        type: 'image',
+     //        closeOnContentClick: false,
+     //        closeBtnInside: false,
+     //        mainClass: 'mfp-with-zoom mfp-img-mobile',
+     //        image: {
+     //          verticalFit: true,
+     //          titleSrc: function(item) {
+     //            return item.el.attr('title') + '<div class="people-description">'+ item.el.attr('description') +'</div>';
+     //          }
+     //        },
+     //        gallery: {
+     //          enabled: true
+     //        },
+     //        zoom: {
+     //          enabled: true,
+     //          duration: 300, // don't foget to change the duration also in CSS
+     //          opener: function(element) {
+     //            return element.find('img');
+     //          }
+     //        },
+     //        callbacks: {
+     //            open: function() {
+     //              $('.mfp-img').wrap('<div class="col-xs-6 col-md-6" style="padding: 0px;"></div>');
+     //              $('figcaption').wrap('<div class="col-xs-6 col-md-6"></div>');
+     //              $('img.mfp-img').attr('style', 'padding: 0px;');
+     //              $('.mfp-bottom-bar').attr('style', 'margin-top: 0px; position: relative; ');
+     //              $('.mfp-content').attr('style', 'border: 1px solid #ccc; background-color: white;');
+     //              $('.mfp-bg').attr('style', 'background-color: rgba(255, 255, 255, 0.98)');
+     //              $('.mfp-title').attr('style', 'color: #333; font-size: 18px; margin-top: 15px;');
+     //            }
+     //        }
+     //      });
+     // } 
+
+
+     // if($('.zoom-gallery-project')){
+     //    $('img.mfp-img').attr('style', 'width: 100%;');
+     //    $('.zoom-gallery-project').magnificPopup({
+     //        delegate: 'a',
+     //        type: 'image',
+     //        closeOnContentClick: false,
+     //        closeBtnInside: false,
+     //        mainClass: 'mfp-with-zoom mfp-img-mobile',
+     //        image: {
+     //          verticalFit: true,
+     //          titleSrc: function(item) {
+     //            return item.el.attr('title') + '<div class="people-description">'+ item.el.attr('description') +'</div>';
+     //          }
+     //        },
+     //        gallery: {
+     //          enabled: true
+     //        },
+     //        zoom: {
+     //          enabled: true,
+     //          duration: 300, // don't foget to change the duration also in CSS
+     //          opener: function(element) {
+     //            return element.find('img');
+     //          }
+     //        },
+     //        callbacks: {
+     //            open: function() {
+     //              $('.mfp-bottom-bar').attr('style', 'display: none;');
+     //              $('.mfp-bg').attr('style', 'background-color: rgba(255, 255, 255, 0.98)');
+     //            }
+     //        }
+     //      });
+     // }       
+     
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

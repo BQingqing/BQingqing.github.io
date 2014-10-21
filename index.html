@@ -1,33 +1,464 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="author" content="QQ_Bee">
-	<meta name="others" content="bqingqing@gmail.com">
-	<meta name="description" content="InfoVis Ninjia">
-	<meta name="keywords" content="qingqing bee, qq_bee, buzz from bee, information visualization, visual analytics, infovis ninjia, infovis, vis, vast, information design, information systems, e-learning">
-	<title>QQ_Bee | Information Visualization, Visual Analytics</title>
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/bee_screen.css" media="screen and (min-device-width: 768px)">
-	<link rel="stylesheet" href="css/bee_mobile.css">
-	<link rel="stylesheet" href="css/bee_print.css" media="print">
-	<link rel="stylesheet" href="lib/font-awesome-4.2.0/css/font-awesome.css">
-	<link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.css">
-	<script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
-	
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+    <meta name="author" content="QQ_Bee">
+    <meta name="others" content="bqingqing@gmail.com">
+    <meta name="description" content="InfoVis Ninjia">
+    <meta name="keywords" content="qingqing bee, qq_bee, buzz from bee, information visualization, visual analytics, infovis ninjia, infovis, vis, vast, information design, information systems, e-learning">
+    <title>QQ_Bee | Information Visualization, Visual Analytics</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href="lib/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Delius+Swash+Caps' rel='stylesheet' type='text/css'>
+    <link href="css/bee.css" rel="stylesheet">
+    <link href="lib/select2.css" rel="stylesheet">
+    <link href="lib/timeline/timeline.css" rel="stylesheet">
+    <link href="lib/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<!--     <link href="lib/diamond/diamond.css" rel="stylesheet"> -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
 
-	<link rel="stylesheet" href="lib/supersized-3.2.7/css/supersized.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="lib/supersized-3.2.7/theme/supersized.shutter.css" type="text/css" media="screen" />
-</head>
+  <body data-spy="scroll">
+    <header>
+      <div class="navbar navbar-static-top" id="nav">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse">
+              <a href="#" class="pull-left ptarmigan-nav hidden-xs">Bee</a>
+              <ul class="nav navbar-nav">
+                <li><a href="#section1">About</a></li>
+                <li><a href="#section2">Profile</a></li>
+                <li><a href="#section3">Exerience</a></li>
+                <li><a href="#section4">Skills</a></li>
+                <li><a href="#section5">Contact</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!--/.container -->
+      </div><!--/.navbar -->
+    </header>
+  
+    <section class="container" id="section1">
+      <h1>About</h1>
+      <h2>Hi this is Bee, I'm a developer and researcher.</h2>
+      <img src="img/about-me.png" alt="">
+    </section>
+    <hr>
 
-<body>
-<div class="container" id="index-main">
-	<h2>BUZZ FROM BEE</h2>
-</div>	
-	<script type="text/javascript" src="lib/supersized-3.2.7/js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="lib/supersized-3.2.7/js/supersized.3.2.7.min.js"></script>
-	<script type="text/javascript" src="lib/supersized-3.2.7/theme/supersized.shutter.min.js"></script>
-	<script type="text/javascript" src="js/bee.js"></script>
-</body>
+    <section class="middle-bg"></section>
+
+    <section class="bg-4" id="section2">
+      <h1>Profile</h1>
+      <div id="slider" class="diamonds">
+        <div class="slide-wrap">
+          <div class="slide slide1">
+            <div class="lattice--triple lattice--centre">
+              <div class="row row1">
+                <!-- 6 posts -->
+                <div class="col col1 group three-quarters-full">
+                  <!-- 3 posts -->
+                  <div class="mask">
+                    <!-- mask -->
+                    <!-- Item 1 -->
+                    <article class="item item1 item--image">
+                    <div class="wrap">
+                      <div class="item__content">
+                        <div class="item__content__inner">
+                          <header>
+                          <h1 class="item__header text-seperator">James Martin Manchester</h1>
+                          <p class="internal-meta">
+                            <time datetime="2014-01-24T12:27:41+00:00">24-01-2014</time>
+                          </p>
+                          </header>
+                          <p class="item__copy">
+                            Website for James Martin's new restaurant inside the Manchester235 Casino.
+                          </p>
+                        </div>
+                      </div>
+                      <img class="item__image" src="img/carousel1.jpg">
+                    </div>
+                    </article>
+                    <!-- Item 2 -->
+                    <article class="item item2 item--image">
+                    <div class="wrap">
+                      <div class="item__content">
+                        <div class="item__content__inner">
+                          <header>
+                          <h1 class="item__header text-seperator">The Space Project</h1>
+                          <p class="internal-meta">
+                            <time datetime="2014-01-24T11:36:03+00:00"></time>
+                          </p>
+                          </header>
+                          <p class="item__copy">
+                          </p>
+                        </div>
+                      </div>
+                      <img class="item__image" src="img/carousel1.jpg">
+                    </div>
+                    </article>
+                    <!-- Item 3 -->
+                    <article class="item item3 item--image">
+                    <div class="wrap">
+                      <div class="item__content">
+                        <div class="item__content__inner">
+                          <header>
+                          <h1 class="item__header text-seperator">Cicchetti: Vogue Fashion Night Out</h1>
+                          <p class="internal-meta">
+                            <time datetime="2013-10-11T11:48:56+00:00">11-10-2013</time>
+                          </p>
+                          </header>
+                          <p class="item__copy">
+                          </p>
+                        </div>
+                      </div>
+                      <img class="item__image" src="img/carousel1.jpg">
+                    </div>
+                    </article>
+                  </div>
+                  <!-- mask -->
+                </div>
+                <!-- 3 posts -->
+                <div class="col col2 group three-quarters-full">
+                  <!-- 3 posts -->
+                  <div class="mask">
+                    <!-- mask -->
+                    <!-- Item 1 -->
+                    <article class="item item1 item--image">
+                    <div class="wrap">
+                      <div class="item__content">
+                        <div class="item__content__inner">
+                          <header>
+                          <h1 class="item__header text-seperator">&#8216;Edits&#8217; Exhibition | Amsterdam</h1>
+                          <p class="internal-meta">
+                            <time datetime="2013-08-06T09:03:32+00:00">06-08-2013</time>
+                          </p>
+                          </header>
+                          <p class="item__copy">
+                          </p>
+                        </div>
+                      </div>
+                      <img class="item__image" src="img/carousel1.jpg">
+                    </div>
+                    </article>
+                    <!-- Item 2 -->
+                    <article class="item item2 item--image">
+                    <div class="wrap">
+                      <div class="item__content">
+                        <div class="item__content__inner">
+                          <header>
+                          <h1 class="item__header text-seperator">Google Chrome Web Lab</h1>
+                          <p class="internal-meta">
+                            <time datetime="2013-06-25T15:01:33+00:00">25-06-2013</time>
+                          </p>
+                          </header>
+                          <p class="item__copy">
+                          </p>
+                        </div>
+                      </div>
+                      <img class="item__image" src="img/carousel1.jpg">
+                    </div>
+                    </article>
+                    <!-- Item 3 -->
+                    <article class="item item3 item--image">
+                    <div class="wrap">
+                      <div class="item__content">
+                        <div class="item__content__inner">
+                          <header>
+                          <h1 class="item__header text-seperator">Trade My Motor</h1>
+                          <p class="internal-meta">
+                            <time datetime="2013-06-17T12:03:34+00:00">17-06-2013</time>
+                          </p>
+                          </header>
+                          <p class="item__copy">
+                          </p>
+                        </div>
+                      </div>
+                      <img class="item__image" src="img/carousel1.jpg">
+                    </div>
+                    </article>
+                  </div>
+                  <!-- mask -->
+                </div>
+                <!-- 3 posts -->
+              </div>
+              <div class="row row2">
+                <!-- 6 posts -->
+                <div class="col col1">
+                  <div class="mask">
+                    <!-- Item 1 -->
+                    <article class="item item1 item--image">
+                    <div class="wrap">
+                      <div class="item__content">
+                        <div class="item__content__inner">
+                          <header>
+                          <h1 class="item__header text-seperator">Beetham Tower</h1>
+                          <p class="internal-meta">
+                            <time datetime="2013-04-24T14:22:17+00:00">24-04-2013</time>
+                          </p>
+                          </header>
+                          <p class="item__copy">
+                            We were tasked to create an identity for Manchester's newest icon, the Beetham Tower
+                          </p>
+                        </div>
+                      </div>
+                      <img class="item__image" src="img/carousel1.jpg">
+                    </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="col col1">
+                  <div class="mask">
+                    <!-- Item -->
+                    <div class="item item--loader static">
+                      <div class="wrap">
+                        <div class="intro">
+                          <div class="intro-text">
+                            <div class="logo">
+                            </div>
+                            <h4 class="brand intro-title">THE DRAWING ROOM</h4>
+                            <p class="">
+                              We are The Drawing Room, a multi-disciplinary creative team specialising in creative solutions
+                            </p>
+                          </div>
+                        </div>
+                        <div class="loader">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col1">
+                  <div class="mask">
+                    <!-- Item 2 -->
+                    <article class="item item2 item--image">
+                    <div class="wrap">
+                      <div class="item__content">
+                        <div class="item__content__inner">
+                          <header>
+                          <h1 class="item__header text-seperator">San Carlo Cicchetti</h1>
+                          <p class="internal-meta">
+                            <time datetime="2013-02-23T18:22:22+00:00">23-02-2013</time>
+                          </p>
+                          </header>
+                          <p class="item__copy">
+                            Our branding and creative for San Carlo's newest restaurant, Cicchetti
+                          </p>
+                        </div>
+                      </div>
+                      <img class="item__image" src="img/carousel1.jpg">
+                    </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <div class="row row3">
+                <!-- 6 posts -->
+                <div class="row--shift-bottom">
+                  <div class="col col1 group three-quarters-full">
+                    <!-- 3 posts -->
+                    <div class="mask">
+                      <!-- row3 mask -->
+                      <!-- Item 1 -->
+                      <article class="item item1 item--image">
+                      <div class="wrap">
+                        <div class="item__content">
+                          <div class="item__content__inner">
+                            <header>
+                            <h1 class="item__header text-seperator">MPowa</h1>
+                            <p class="internal-meta">
+                              <time datetime="2013-03-25T17:28:13+00:00">25-03-2013</time>
+                            </p>
+                            </header>
+                            <p class="item__copy">
+                            </p>
+                          </div>
+                        </div>
+                        <img class="item__image" src="img/carousel1.jpg">
+                      </div>
+                      </article>
+                      <!-- Item 2 -->
+                      <article class="item item2 item--image">
+                      <div class="wrap">
+                        <div class="item__content">
+                          <div class="item__content__inner">
+                            <header>
+                            <h1 class="item__header text-seperator">ukprintprice.com</h1>
+                            <p class="internal-meta">
+                              <time datetime="2013-03-21T09:46:37+00:00">21-03-2013</time>
+                            </p>
+                            </header>
+                            <p class="item__copy">
+                              UKprintprice is one of the UK's leading websites for printing. We created a unique brand identity that they could apply across their website and marketing
+                            </p>
+                          </div>
+                        </div>
+                        <img class="item__image" src="img/carousel1.jpg">
+                      </div>
+                      </article>
+                      <!-- Item 3 -->
+                      <article class="item item3 item--image">
+                      <div class="wrap">
+                        <div class="item__content">
+                          <div class="item__content__inner">
+                            <header>
+                            <h1 class="item__header text-seperator">The Football Conference</h1>
+                            <p class="internal-meta">
+                              <time datetime="2013-02-26T15:00:49+00:00">26-02-2013</time>
+                            </p>
+                            </header>
+                            <p class="item__copy">
+                              We created a suite of marketing material to help The Football Conference find new corporate sponsorship to for their three divisions.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="item__image" src="img/carousel1.jpg">
+                      </div>
+                      </article>
+                    </div>
+                    <!-- row3 mask -->
+                  </div>
+                  <!-- 3 posts -->
+                  <div class="col col2 group three-quarters-full">
+                    <!-- 3 posts -->
+                    <div class="mask">
+                      <!-- row3 mask -->
+                      <!-- Item 1 -->
+                      <article class="item item1 item--image">
+                      <div class="wrap">
+                        <div class="item__content">
+                          <div class="item__content__inner">
+                            <header>
+                            <h1 class="item__header text-seperator">Club La Santa</h1>
+                            <p class="internal-meta">
+                              <time datetime="2013-02-23T19:09:48+00:00">23-02-2013</time>
+                            </p>
+                            </header>
+                            <p class="item__copy">
+                            </p>
+                          </div>
+                        </div>
+                        <img class="item__image" src="img/carousel1.jpg">
+                      </div>
+                      </article>
+                      <!-- Item 2 -->
+                      <article class="item item2 item--image">
+                      <div class="wrap">
+                        <div class="item__content">
+                          <div class="item__content__inner">
+                            <header>
+                            <h1 class="item__header text-seperator">Spinningfields Christmas Card</h1>
+                            <p class="internal-meta">
+                              <time datetime="2013-02-23T18:51:04+00:00"></time>
+                            </p>
+                            </header>
+                            <p class="item__copy">
+                              We created a unique, original and dynamic way for Spinningfields, Manchester’s to wish their customers all the best for Christmas 2012.
+                            </p>
+                          </div>
+                        </div>
+                        <img class="item__image" src="img/carousel1.jpg">
+                      </div>
+                      </article>
+                      <!-- Item 3 -->
+                      <article class="item item3 item--image">
+                      <div class="wrap">
+                        <div class="item__content">
+                          <div class="item__content__inner">
+                            <header>
+                            <h1 class="item__header text-seperator">The Space Project CGI</h1>
+                            <p class="internal-meta">
+                              <time datetime="2013-02-23T18:15:35+00:00"></time>
+                            </p>
+                            </header>
+                            <p class="item__copy">
+                              The Sharp Project is a dynamic hub for TV, film production  we created a CGI animated story of the building and its environs for it's new facility
+                            </p>
+                          </div>
+                        </div>
+                        <img class="item__image" src="img/carousel1.jpg">
+                      </div>
+                      </article>
+                    </div>
+                    <!-- row3 mask -->
+                  </div>
+                  <!-- 3 posts -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+    
+    <section class="container" id="section3">
+      <h1>Experience</h1>
+      <div id="timeline-embed"></div>
+    </section>
+
+    <hr>
+      
+    <section class="bg-4" id="section4">
+      <h1>Skills</h1>
+      <img src="img/skills.png" alt="">
+    </section>
+
+    <hr>
+
+    <section class="container" id="section5">
+      <h1>Contact</h1>
+    </section>
+
+    <hr>
+
+    <footer class="row">
+        <div class="col-xs-12 col-sm-6">
+          Share To: 
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-wordpress"></i>
+              <i class="fa fa-youtube"></i>
+        </div>
+        <div class="col-xs-12 col-sm-6 pull-right">
+          Copyright © 2014 QQ_Bee, All rights reserved.
+        </div>
+    </footer>
+    
+    <a href="#" class="pull-right scroll-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <script type='text/javascript' src="lib/jquery-2.1.1.min.js"></script>
+    <script type='text/javascript' src="lib/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="lib/timeline/js/timeline-min.js"></script>
+    <script type="text/javascript">
+        var timeline_config = {
+            width:              '100%',
+            height:             '500',
+            source:             'https://docs.google.com/spreadsheet/pub?key=0AhmhplFqWyGbdHNzZ1NpdFBaRFNBQ3l4WXlYbE9fMVE&output=html',
+            embed_id:           'timeline-embed',
+            start_at_end:       false,
+            start_at_slide:     '0',
+            start_zoom_adjust:  '1',
+            hash_bookmark:      true,
+            debug:              true,
+            lang:               'de',  //LANGUAGE
+            maptype:            'watercolor',
+            css:                'lib/timeline/css/timeline.css',
+            js:                 'lib/timeline/js/timeline.js'
+        }
+    </script>
+    <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script> 
+    <script src="js/bee.js" type="text/javascript"></script>      
+  </body>
 </html>
