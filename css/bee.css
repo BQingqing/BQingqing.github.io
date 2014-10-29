@@ -403,4 +403,13 @@ img.mfp-img{
   #section4 h1{
     text-align: center;
   }
+
+  .project-item img{
+    height: 150px;
+    margin: 10px auto;
+  }
+
+  .infograpics .project-item img{
+    height: auto;
+  }
 }
