@@ -400,8 +400,13 @@ img.mfp-img{
 }
 
 @media screen and (max-width: 767px){
-  #section4 h1{
-    text-align: center;
+  #section1, #section4{
+    height: auto;
+    background: none;
+  }
+
+  hr{
+    border-top: 1px dotted #999;
   }
 
   .project-item img{
